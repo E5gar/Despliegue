@@ -55,12 +55,12 @@ st.markdown("""
 st.title("Clasificación de patologías relacionadas a la Hipertensión")
 
 # Cargando modelos
-ruta_modelo_DT = "Modelos/modelo_DT.pkl"
+ruta_modelo_DT = "Modelos/modelo_DT.pkl"    # Original
 modelo_DT = joblib.load(ruta_modelo_DT)
-# ruta_modelo_RF = "Modelos/modelo_RF.pkl"
-# modelo_RF = joblib.load(ruta_modelo_RF)
-# ruta_modelo_EX = "Modelos/modelo_EX.pkl"
-# modelo_EX = joblib.load(ruta_modelo_EX)
+ruta_modelo_RF = "Modelos/modelo_RFv2.pkl"    # v2 de menor almacenamiento
+modelo_RF = joblib.load(ruta_modelo_RF)
+ruta_modelo_ET = "Modelos/modelo_EXv2.pkl"    # v2 de menor almacenamiento
+modelo_ET = joblib.load(ruta_modelo_ET)
 
 # Cargando Label Encoders
 label_encoders = {}
@@ -159,8 +159,8 @@ if submitted:
     # Realizando predicción con los modelos
     modelos = {
         '🌳 Decision Tree': modelo_DT,
-        # '🌲 Random Forest': modelo_RF
-        # '🌲 Extra Trees': modelo_ET
+        '💻 Random Forest': modelo_RF,
+        '🎲 Extra Trees': modelo_ET
     }
     resultados = predecir_paciente(paciente, modelos)
 
