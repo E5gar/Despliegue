@@ -59,7 +59,7 @@ ruta_modelo_DT = "Modelos/modelo_DT.pkl"    # Original
 modelo_DT = joblib.load(ruta_modelo_DT)
 ruta_modelo_RF = "Modelos/modelo_RFv2.pkl"    # v2 de menor almacenamiento
 modelo_RF = joblib.load(ruta_modelo_RF)
-ruta_modelo_ET = "Modelos/modelo_EXv2.pkl"    # v2 de menor almacenamiento
+ruta_modelo_ET = "Modelos/modelo_ETv2.pkl"    # v2 de menor almacenamiento
 modelo_ET = joblib.load(ruta_modelo_ET)
 
 # Cargando Label Encoders
